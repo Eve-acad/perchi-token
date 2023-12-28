@@ -90,6 +90,34 @@ body {
   color: #007ea1; /* Color on hover */
 }
 
+/* ... Your existing CSS ... */
+
+.marquee {
+  overflow: hidden;
+  background-color: #F2A900; /* Match the background color with your design */
+  width: 100%; /* Full width */
+}
+
+.marquee-content {
+  display: flex;
+  width: auto;
+  animation: marquee-animation 5s linear infinite; /* Adjust time for speed */
+}
+
+.marquee-content span {
+  font-size: 2em; /* Adjust size as needed */
+  white-space: nowrap; /* Keep everything in one line */
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee-animation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Updated to -50% for two sets of content */
+}
+
+/* ... Your existing responsive CSS ... */
+
+
 .tokenomics-section {
   background-color: #1D1D1D;
   color: white;
