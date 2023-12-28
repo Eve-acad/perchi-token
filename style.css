@@ -1,120 +1,244 @@
 body {
-    margin: 0;
-    font-family: 'Patrick Hand SC', cursive;
-    background-color: #9FEBFF; /* Pink background */
-    font-size: 18px; /* Default text size */
-    font-weight: bolder; /* Bold font weight */
-  }
-  
-  p{
-    font-size: 30px; /* Default text size */
-  }
-  .header {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .logo-container img {
-    max-width: 80%;
-    height: auto;
-  }
-  
-  .powered-by {
-    font-size: 1.5em;
-    margin-top: -10px; /* Adjust as needed */
-  }
-  
+  margin: 0;
+  font-family: 'Freckle Face', cursive;
+  background-color: #FF01FF; /* Pink background */
+  font-size: 18px; /* Default text size */
+  font-weight: bolder; /* Bold font weight */
+}
+
+.landing-section {
+  min-height: 100vh; /* Make landing section cover the full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 5em; /* Bigger header font size */
+  margin-bottom: 0.5em;
+}
+
+.header p {
+  font-size: 2.5em; /* Adjust paragraph size in header if needed */
+  margin-top: -10px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.mascot img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-content p {
+  font-size: 1.5rem; /* Smaller text size for paragraph */
+  margin-bottom: 10px; /* Increased space for social buttons */
+}
+
+.mascot {
+  margin-bottom: 40px; /* Space between mascot image and text content */
+  margin-right: 5rem;
+}
+
+.buy-button {
+  /* ... other styles ... */
+  margin-top: 20px; /* Space above the buy button */
+  display: block; /* To center the button if it's not flex-item */
+  width: max-content; /* To keep the button size according to its content */
+  margin-left: auto; /* Combined with margin-right: auto, will center the button */
+  margin-right: auto;
+}
+
+.buy-button {
+  font-size: 1.75rem;
+  padding: 20px 25px;
+  border: 5px solid #000; /* Black border */
+  background-color: #7225ff; /* Red background */
+  color: #fff; /* White text */
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transitions */
+  margin-bottom: 20px; /* Space below the button */
+}
+
+.buy-button:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+  background-color: #fff; /* Background to white on hover */
+  color: #FF3131; /* Text color to red on hover */
+}
+
+.social-buttons {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-button {
+  font-size: 35px;
+  margin: 0 10px;
+  color: #333; /* Initial color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.social-button:hover {
+  color: #007ea1; /* Color on hover */
+}
+
+.tokenomics-section {
+  background-color: #1D1D1D;
+  color: white;
+  font-family: 'Freckle Face', cursive; /* Keep the font family consistent */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tokenomics-section h2{
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.tokenomics-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tokenomics-image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 5px solid #ffffff; /* Black border */
+}
+
+.tokenomics-text {
+  color: white;
+}
+
+.tokenomics-text p{
+  color: white;
+  font-size: 1.3rem;
+}
+
+.token-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.token-stat {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #F2A900;
+  font-size: 1.5rem;
+  width: 200px; /* Adjust as necessary */
+  margin-bottom: 20px;
+}
+/* ... Your existing CSS above ... */
+
+/* Full-page GIF background section */
+.gif-background-section {
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width */
+  background: url('perchi.gif') no-repeat center center fixed; 
+  background-size: cover; /* Cover the entire section with the GIF */
+}
+
+/* Footer styling */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000; /* Or any color you prefer */
+  color: #fff; /* For the text color */
+}
+
+/* Footer paragraph styling */
+.site-footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 1rem;
+}
+
+/* ... Your existing responsive CSS below ... */
+
+
+
+@keyframes hue-rotate-animation {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.tokenomics-image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 5px solid #ffffff;
+  animation: hue-rotate-animation 3s infinite linear; /* Adjust time as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .content {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .mascot img {
-    max-width: 100%;
-    height: auto;
-    align-items: center;
-  }
-  
-  .text-content {
-    text-align: center;
-    margin-bottom: 20px; /* Space for social buttons */
-  }
-  
-  .buy-button {
-    font-size: 1.5rem;
-    font-family: 'Patrick Hand SC', cursive;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 5px solid #000; /* Black border */
-    background-color: #FF3131; /* Red background */
-    color: #fff; /* White text */
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.3s, background-color 0.3s; /* Smooth transitions */
-    margin-bottom: 20px; /* Space below the button */
-  }
-  
-  .buy-button:hover {
-    transform: scale(1.1); /* Enlarge on hover */
-    background-color: #fff; /* Background to white on hover */
-    color: #FF3131; /* Text color to red on hover */
-  }
-  
-  .social-buttons {
-    text-align: center;
-    padding: 20px;
+    flex-direction: column;
+}
+
+.mascot,
+.text-content,
+.buy-button {
+    width: 100%; /* Full width for small screens */
+    max-width: 600px; /* Optional: Restrict max width for larger small screens */
+    margin: 0 auto; /* Center elements in the section */
+}
+
+.mascot img {
+    max-width: 80%; /* Adjust the size of the mascot image as needed */
+}
+
+.text-content {
+    order: 2; /* Ensure text content comes after the mascot image */
+}
+
+.buy-button {
+    order: 3; /* Ensure the buy button comes last */
+    width: auto; /* Allow the button to size according to its content */
+    margin-top: 20px; /* Add space above the buy button */
+}
+
+/* Adjust paragraph and header font sizes for better readability on small screens */
+.text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Less space on smaller screens */
+}
+
+.header h1 {
+    font-size: 2.5rem; /* Adjust the size of the header on small screens */
+}
+}
+  .tokenomics-content {
+      flex-direction: column;
   }
 
-  .social-button {
-    font-size: 24px;
-    margin: 0 10px;
-    color: #333; /* Initial color */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+  .tokenomics-image {
+      max-width: 80%;
+  }
+
+  .token-stat {
+      width: 80%;
+      margin: 10px auto; /* Center stats on small screens */
   }
   
-  .social-button:hover {
-    color: #007ea1; /* Color on hover */
-  }  
-  
+
+  .buy-button,
   .social-button {
-    font-size: 24px;
-    margin: 0 10px;
-    color: #333;
-  }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      align-items: center; /* Centers the flex container's children */
-      padding: 20px 0; /* Adds padding on the top and bottom */
-    }
-  
-    .mascot {
-      width: 100%; /* Ensures the mascot container spans the full width */
-      display: flex;
-      justify-content: center; /* Centers the mascot image */
-    }
-  
-    .mascot img {
-      max-width: 80%; /* Adjust the size of the mascot image as needed */
-      height: auto;
-      margin-bottom: 20px; /* Adjusts the gap between the mascot and the text */
-    }
-  
-    .text-content {
-      width: 100%; /* Ensures the text content container spans the full width */
-    }
-  
-    .buy-button,
-    .social-button {
       font-size: 1rem; /* Smaller font size for buttons */
-    }
-    
-    body {
-      font-size: 13px; /* Minimum font size for small screens */
-    }
   }
   
+  body {
+      font-size: 13px; /* Minimum font size for small screens */
+  }
+
