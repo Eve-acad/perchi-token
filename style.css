@@ -261,9 +261,11 @@ body {
   }
   
 
-  .buy-button,
+  .buy-button {
+    font-size: 1.2rem; /* Smaller font size for buttons */
+  }
   .social-button {
-      font-size: 1rem; /* Smaller font size for buttons */
+      font-size: 2rem; /* Smaller font size for buttons */
   }
   
   body {
