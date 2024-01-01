@@ -1,17 +1,13 @@
 body {
   margin: 0;
   font-family: 'Freckle Face', cursive;
-  background-image: url('landing.gif');
-  /* Path to your GIF */
-  background-repeat: no-repeat;
-  /* To prevent the GIF from repeating */
-  background-size: contain;
-  /* To cover the whole background */
+
   font-size: 18px;
   /* Default text size */
   font-weight: bolder;
   /* Bold font weight */
   background-color: #FF01FF;
+  color: #FFFFFF;
 }
 
 
@@ -39,13 +35,12 @@ body {
 
 .content {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 20px;
 }
 
 .mascot img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -59,20 +54,35 @@ body {
 .mascot {
   margin-bottom: 40px;
   /* Space between mascot image and text content */
-  margin-right: 5rem;
+  margin-right: 1rem;
+  max-width: 60%;
 }
 
 .buy-button {
-  /* ... other styles ... */
   margin-top: 20px;
-  /* Space above the buy button */
   display: block;
-  /* To center the button if it's not flex-item */
   width: max-content;
-  /* To keep the button size according to its content */
   margin-left: auto;
-  /* Combined with margin-right: auto, will center the button */
   margin-right: auto;
+}
+
+.header .logo-container {
+  text-align: center;
+  /* Center the logo container if it's not already centered */
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.header .logo {
+  max-width: 100%;
+  /* Ensures the logo is responsive and fits its container */
+  height: auto;
+  /* Maintains the aspect ratio of the image */
+  max-height: 150px;
+  /* Sets a maximum height for the logo */
+  width: auto;
+  /* Ensures the width of the image scales with the height */
+
 }
 
 .buy-button {
@@ -161,13 +171,46 @@ body {
 
 
 .tokenomics-section {
-  background-color: #1D1D1D;
+  position: relative;
   color: white;
   font-family: 'Freckle Face', cursive;
-  /* Keep the font family consistent */
-  padding: 40px 20px;
   text-align: center;
+  overflow: hidden;
 }
+
+.tokenomics-video {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure the video is in the background */
+}
+
+/* Overlay if needed to make the text more readable */
+.tokenomics-video::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Dark overlay with 50% opacity */
+  z-index: 0; /* Above the video but below the content */
+}
+
+/* Container for the text to position it above the video */
+.tokenomics-container {
+  position: relative;
+  padding: 40px 20px;
+  z-index: 1; /* Above the video and overlay */
+}
+
+/* ... rest of your tokenomics styles ... */
+
 
 .tokenomics-section h2 {
   font-size: 3.5rem;
@@ -271,54 +314,66 @@ body {
 @media (max-width: 768px) {
 
   body {
-    background-color: #FF01FF; /* Cover for smaller screens */
+    background-color: #FF01FF;
+    /* Cover for smaller screens */
   }
+
   .content {
     flex-direction: column;
   }
 
-  .mascot,
-  .text-content,
-  .buy-button {
-    width: 100%;
-    /* Full width for small screens */
-    max-width: 600px;
-    /* Optional: Restrict max width for larger small screens */
-    margin: 0 auto;
-    /* Center elements in the section */
+  .header .logo {
+    max-height: 100px;
+    /* Smaller max height for smaller screens */
   }
 
-  .mascot img {
-    max-width: 80%;
-    /* Adjust the size of the mascot image as needed */
-  }
-
-  .text-content {
-    order: 2;
-    /* Ensure text content comes after the mascot image */
-  }
-
-  .buy-button {
-    order: 3;
-    /* Ensure the buy button comes last */
-    width: auto;
-    /* Allow the button to size according to its content */
-    margin-top: 20px;
-    /* Add space above the buy button */
-  }
-
-  /* Adjust paragraph and header font sizes for better readability on small screens */
-  .text-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    /* Less space on smaller screens */
-  }
-
-  .header h1 {
-    font-size: 2.5rem;
-    /* Adjust the size of the header on small screens */
-  }
+.text-content img{
+  margin-top: 20px;
 }
+
+.mascot,
+.text-content,
+.buy-button {
+  width: 100%;
+  /* Full width for small screens */
+  max-width: 600px;
+  /* Optional: Restrict max width for larger small screens */
+  margin: 0 auto;
+  /* Center elements in the section */
+}
+
+.mascot img {
+  max-width: 80%;
+  /* Adjust the size of the mascot image as needed */
+}
+
+.text-content {
+  order: 2;
+  /* Ensure text content comes after the mascot image */
+}
+
+.buy-button {
+  order: 3;
+  /* Ensure the buy button comes last */
+  width: auto;
+  /* Allow the button to size according to its content */
+  margin-top: 20px;
+  /* Add space above the buy button */
+}
+
+/* Adjust paragraph and header font sizes for better readability on small screens */
+.text-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  /* Less space on smaller screens */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  /* Adjust the size of the header on small screens */
+}
+}
+
 
 .tokenomics-content {
   flex-direction: column;
