@@ -1,0 +1,409 @@
+
+
+
+body {
+  margin: 0;
+  font-family: 'Freckle Face', cursive;
+
+  font-size: 18px;
+  /* Default text size */
+  font-weight: bolder;
+  /* Bold font weight */
+  background-color: #FF01FF;
+  color: #FFFFFF;
+}
+
+
+.landing-section {
+  min-height: 100vh;
+  /* Make landing section cover the full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 5em;
+  /* Bigger header font size */
+  margin-bottom: 0.5em;
+}
+
+.header p {
+  font-size: 2.5em;
+  /* Adjust paragraph size in header if needed */
+  margin-top: -10px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.mascot img {
+  max-width: 70%;
+  height: auto;
+}
+
+.text-content p {
+  font-size: 1.5rem;
+  /* Smaller text size for paragraph */
+  margin-bottom: 10px;
+  /* Increased space for social buttons */
+}
+
+.mascot {
+  margin-bottom: 40px;
+  /* Space between mascot image and text content */
+  margin-right: 1rem;
+  max-width: 60%;
+}
+
+.buy-button {
+  margin-top: 20px;
+  display: block;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header .logo-container {
+  text-align: center;
+  /* Center the logo container if it's not already centered */
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.header .logo {
+  max-width: 100%;
+  /* Ensures the logo is responsive and fits its container */
+  height: auto;
+  /* Maintains the aspect ratio of the image */
+  max-height: 150px;
+  /* Sets a maximum height for the logo */
+  width: auto;
+  /* Ensures the width of the image scales with the height */
+
+}
+
+.buy-button {
+  font-size: 1.75rem;
+  padding: 20px 25px;
+  border: 5px solid #000;
+  /* Black border */
+  background-color: #7225ff;
+  /* Red background */
+  color: #fff;
+  /* White text */
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+  /* Smooth transitions */
+  margin-bottom: 20px;
+  /* Space below the button */
+}
+
+.buy-button:hover {
+  transform: scale(1.1);
+  /* Enlarge on hover */
+  background-color: #fff;
+  /* Background to white on hover */
+  color: #FF3131;
+  /* Text color to red on hover */
+}
+
+.social-buttons {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-button {
+  font-size: 35px;
+  margin: 0 10px;
+  color: #333;
+  /* Initial color */
+  transition: color 0.3s ease;
+  /* Smooth transition for color change */
+}
+
+.social-button:hover {
+  color: #007ea1;
+  /* Color on hover */
+}
+
+/* ... Your existing CSS ... */
+
+.marquee {
+  overflow: hidden;
+  background-color: #F2A900;
+  /* Match the background color with your design */
+  width: 100%;
+  /* Full width */
+}
+
+.marquee-content {
+  display: flex;
+  width: auto;
+  animation: marquee-animation 5s linear infinite;
+  /* Adjust time for speed */
+}
+
+.marquee-content span {
+  font-size: 2em;
+  /* Adjust size as needed */
+  white-space: nowrap;
+  /* Keep everything in one line */
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+  /* Updated to -50% for two sets of content */
+}
+
+/* ... Your existing responsive CSS ... */
+
+
+.tokenomics-section {
+  position: relative;
+  color: white;
+  font-family: 'Freckle Face', cursive;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tokenomics-video {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure the video is in the background */
+}
+
+/* Overlay if needed to make the text more readable */
+.tokenomics-video::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Dark overlay with 50% opacity */
+  z-index: 0; /* Above the video but below the content */
+}
+
+/* Container for the text to position it above the video */
+.tokenomics-container {
+  position: relative;
+  padding: 40px 20px;
+  z-index: 1; /* Above the video and overlay */
+}
+
+/* ... rest of your tokenomics styles ... */
+
+
+.tokenomics-section h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.tokenomics-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tokenomics-image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 5px solid #ffffff;
+  /* Black border */
+}
+
+.tokenomics-text {
+  color: white;
+}
+
+.tokenomics-text p {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.token-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.token-stat {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #F2A900;
+  font-size: 1.5rem;
+  width: 200px;
+  /* Adjust as necessary */
+  margin-bottom: 20px;
+}
+
+/* ... Your existing CSS above ... */
+
+/* Full-page GIF background section */
+.gif-background-section {
+  height: 100vh;
+  /* Full height of the viewport */
+  width: 100%;
+  /* Full width */
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  /* Cover the entire section with the GIF */
+}
+
+/* Footer styling */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  /* Or any color you prefer */
+  color: #fff;
+  /* For the text color */
+}
+
+/* Footer paragraph styling */
+.site-footer p {
+  margin: 0;
+  /* Remove default margin */
+  font-size: 1rem;
+}
+
+/* ... Your existing responsive CSS below ... */
+
+
+
+@keyframes hue-rotate-animation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.tokenomics-image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 5px solid #ffffff;
+  animation: hue-rotate-animation 3s infinite linear;
+  /* Adjust time as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  body {
+    background-color: #FF01FF;
+    /* Cover for smaller screens */
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .header .logo {
+    max-height: 100px;
+    /* Smaller max height for smaller screens */
+  }
+
+.text-content img{
+  margin-top: 20px;
+}
+
+.mascot,
+.text-content,
+.buy-button {
+  width: 100%;
+  /* Full width for small screens */
+  max-width: 600px;
+  /* Optional: Restrict max width for larger small screens */
+  margin: 0 auto;
+  /* Center elements in the section */
+}
+
+.mascot img {
+  max-width: 80%;
+  /* Adjust the size of the mascot image as needed */
+}
+
+.text-content {
+  order: 2;
+  /* Ensure text content comes after the mascot image */
+}
+
+.buy-button {
+  order: 3;
+  /* Ensure the buy button comes last */
+  width: auto;
+  /* Allow the button to size according to its content */
+  margin-top: 20px;
+  /* Add space above the buy button */
+}
+
+/* Adjust paragraph and header font sizes for better readability on small screens */
+.text-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  /* Less space on smaller screens */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  /* Adjust the size of the header on small screens */
+}
+}
+
+
+.tokenomics-content {
+  flex-direction: column;
+}
+
+.tokenomics-image {
+  max-width: 80%;
+}
+
+.token-stat {
+  width: 80%;
+  margin: 10px auto;
+  /* Center stats on small screens */
+}
+
+
+.buy-button {
+  font-size: 1.2rem;
+  /* Smaller font size for buttons */
+}
+
+.social-button {
+  font-size: 2rem;
+  /* Smaller font size for buttons */
+}
+
+body {
+  font-size: 13px;
+  /* Minimum font size for small screens */
+}
