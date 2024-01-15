@@ -1,15 +1,14 @@
 body {
   margin: 0;
-  font-family: 'Freckle Face', cursive;
-
+  font-family: 'Lilita One', cursive;
   font-size: 18px;
-  /* Default text size */
   font-weight: bolder;
-  /* Bold font weight */
-  background-color: #FF01FF;
+  /* Remove the background-color property to remove the pink background */
+  /* Add the background-image property to set the background image */
+  background-image: url('bg.jpg');
+  background-size: auto; /* Adjust as needed */
   color: #FFFFFF;
 }
-
 
 .landing-section {
   min-height: 100vh;
@@ -90,7 +89,7 @@ body {
   padding: 20px 25px;
   border: 5px solid #000;
   /* Black border */
-  background-color: #7225ff;
+  background-color: #258bff;
   /* Red background */
   color: #fff;
   /* White text */
@@ -119,14 +118,14 @@ body {
 .social-button {
   font-size: 35px;
   margin: 0 10px;
-  color: #333;
+  color: #ffffff;
   /* Initial color */
   transition: color 0.3s ease;
   /* Smooth transition for color change */
 }
 
 .social-button:hover {
-  color: #007ea1;
+  color: #258bff;
   /* Color on hover */
 }
 
@@ -134,7 +133,7 @@ body {
 
 .marquee {
   overflow: hidden;
-  background-color: #F2A900;
+  background-color: #258bff;
   /* Match the background color with your design */
   width: 100%;
   /* Full width */
@@ -142,6 +141,7 @@ body {
 
 .marquee-content {
   display: flex;
+
   width: auto;
   animation: marquee-animation 5s linear infinite;
   /* Adjust time for speed */
@@ -173,7 +173,6 @@ body {
 .tokenomics-section {
   position: relative;
   color: white;
-  font-family: 'Freckle Face', cursive;
   text-align: center;
   overflow: hidden;
 }
@@ -250,7 +249,7 @@ body {
 .token-stat {
   margin: 0 10px;
   padding: 10px;
-  background-color: #F2A900;
+  background-color: #258bff;
   font-size: 1.5rem;
   width: 200px;
   /* Adjust as necessary */
